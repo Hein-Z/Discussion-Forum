@@ -45,7 +45,6 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'image' => 'required|image|mimes:png,jpg,jpeg'
         ]);
-        dd($request->all());
         $image = $request->file('image');
         $image_name = uniqid() . str_replace(' ', '', $image->getClientOriginalName());
         $image_path = '/images/profile/';
